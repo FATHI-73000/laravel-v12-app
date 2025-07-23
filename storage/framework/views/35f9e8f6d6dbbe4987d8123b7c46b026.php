@@ -1,0 +1,1 @@
+<h1>Products <h1><?php /**PATH /home/user/my-laravel-app/resources/views/Product.blade.php ENDPATH**/ ?>

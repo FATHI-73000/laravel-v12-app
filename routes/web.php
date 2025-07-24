@@ -14,7 +14,7 @@ Route::get('/cart', function(){
     return view ('panier');
 });
 
-Route::get('/Product', [ProductController::class, 'index']); 
-Route::get('/Product/{id}', [ProductController::class, 'show']);
+Route::get('/product', [ProductController::class, 'index']); 
+Route::get('/Product/{jeanJacque}/{id}', [ProductController::class, 'show']);
 
 

@@ -7,16 +7,17 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-   
-public function index()
-{
-return view('Product');
-
-
-
-}
- public function show(int $id)
+    public function index()
     {
-        return view('product-sheet', ['id' => $id]);
+        $stock=5;
+        $title = "catalogue-des-t-shirts";  // variable
+
+        return view('product' , ['stock' => $stock]);
+    }
+
+    public function show(int $jeanJacque, int $id)
+    {
+        return view('product-sheet', ['alina' => $jeanJacque, 'toto' => $id]);
     }
 }
+ 

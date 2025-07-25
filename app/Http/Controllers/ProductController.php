@@ -9,10 +9,13 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $stock=5;
-        $title = "catalogue-des-t-shirts";  // variable
+        $produits = [
+            ['nom' => 'T-Shirt Bleu', 'stock' => 15],
+            ['nom' => 'T-Shirt Rouge', 'stock' => 5],
+            ['nom' => 'T-Shirt Vert', 'stock' => 0],
+        ];
 
-        return view('product' , ['stock' => $stock]);
+        return view('product', compact('produits'));
     }
 
     public function show(int $jeanJacque, int $id)
@@ -20,4 +23,3 @@ class ProductController extends Controller
         return view('product-sheet', ['alina' => $jeanJacque, 'toto' => $id]);
     }
 }
- 

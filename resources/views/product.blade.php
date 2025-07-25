@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Stock</title>
-</head>
-<body>
-    <h1>Liste des produits</h1>
+@extends('layout')
 
-    @foreach($produits as $produit)
+@section('title', 'Stock des produits')
+@section('header', 'Liste des produits')
+
+@section('content')
+    @foreach($produits as $produit) 
         <h2>{{ $produit['nom'] }}</h2>
 
         @if($produit['stock'] > 10)
@@ -18,6 +16,4 @@
         @endif
         <hr>
     @endforeach
-
-</body>
-</html>
+@endsection
